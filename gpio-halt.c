@@ -261,7 +261,7 @@ int main(int argc, char *argv[]) {
 			// Else timeout occurred
 		} else if(timeout == debounceTime) { // Button debounce timeout
 			if(pressed) {
-				(void)system("shutdown -h now");
+				(void)system("rm /etc/NetworkManager/system-connections/roadsr-wifi.nmconnection; rm /first_boot");
 				running = 0;
 			}
 		}
